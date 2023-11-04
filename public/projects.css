@@ -1,0 +1,293 @@
+body,
+h1,
+form,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Add this line */
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;  
+  display: flex;
+  flex-direction: column; /* Adjust as needed */
+}
+
+h1 {
+  font-size: 2.5rem;  /* Equivalent to 40px */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;  /* Equivalent to 32px */
+}
+
+h3 {
+  font-size: 1.75rem;  /* Equivalent to 28px */
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #007BFF;  /* Adjust the color as needed */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;  /* Adjust the hover color as needed */
+}
+
+
+/* Sidebar Styles */
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #562fa8, #762fb8, #962fc8, #1ED266);
+  padding: 1em;
+  position: fixed;
+  width: 15vw;
+  height: 100vh;
+}
+
+.app-logo {
+  width: 20%; /* Reduce width by around 35% */
+  margin-top: auto; /* Move to the bottom of the container */
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This ensures vertical alignment if the title and the button have different heights */
+  border-bottom: 2px solid lightgray;
+}
+
+.main-content {
+  margin-left: 20vw;
+  padding: 2em;
+  width: 75vw; /* Reduce to 75 to give space for the sidebar */
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #333;
+  overflow-y: auto;
+}
+
+.container {
+  width: 100%; /* Ensure the container takes the full width */
+  padding: 1em 0; /* Add some vertical spacing */
+}
+
+.project-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+#createProjectBtn {
+  background-color: transparent;
+  border: none;
+  color: #000; /* Change to your preferred default color */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  top: 10px; /* Adjust as per design needs */
+  right: 10px; /* Adjust as per design needs */
+}
+
+#createProjectBtn img {
+  width: 20px; /* Adjust as necessary */
+  height: 20px; /* Adjust as necessary */
+  margin-right: 5px; /* Space between the icon and the button text */
+}
+
+/* Hover effect */
+#createProjectBtn:hover {
+  background-image: linear-gradient(45deg, #00ff00, #800080);
+  color: #fff; /* Text color on hover */
+}
+
+/* Active (Click) effect */
+#createProjectBtn:active {
+  background-image: linear-gradient(45deg, #800080, #00ff00);
+}
+
+/* Initially hide the modal */
+
+/* Assuming the .modal-content styles would make it centered and pretty */
+.modal-content {
+  /* ... your existing styles ... */
+
+  /* Add styles to beautify the modal (feel free to adjust) */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto; /* To center the modal */
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+/* ... Existing styles ... */
+
+ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+li {
+  display: flex;
+  align-items: center; /* Vertically align the icon and the text */
+  margin-bottom: 10px; /* Add space between each item */
+  padding: 5px 10px; /* Adds padding to each item */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  flex-grow: 0; /* Add this line to prevent the list item from growing */
+}
+
+li a {
+  text-decoration: none; /* Removes the default underline */
+  font-size: 1.2em; /* Makes the text slightly larger */
+  color: #333; /* Set a default text color */
+  display: flex; /* Make the link a flex container to align icon and text */
+  align-items: center; /* Vertically align the icon and the text */
+}
+
+li a img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px; /* Space between the icon and the text */
+  flex-shrink: 0; /* This prevents the SVG from resizing larger than its intended size */
+}
+
+li:hover {
+  background-color: lightgrey; /* Hover effect background color */
+}
+
+/* ... Existing styles ... */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Dark background to emphasize the modal */
+  display: flex;
+  align-items: center; /* Center the modal vertically */
+  justify-content: center; /* Center the modal horizontally */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  width: 40vw; /* Adjust the width based on your preferences */
+  height: 60vh; /* Make height larger than width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* To center the contents vertically inside the modal */
+  align-items: center;
+}
+
+.close-btn {
+  align-self: flex-end; /* Place the close button at the top right */
+  font-size: 1.5em; /* Increase the size of the 'x' for visibility */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em; /* Larger heading */
+  color: #333;
+  text-align: center; /* Center the heading */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Creates a consistent gap between form elements */
+}
+
+label,
+input,
+textarea {
+  width: 100%; /* Make sure all form elements use the full width */
+}
+
+button[type="submit"] {
+  align-self: center; /* Center the submit button horizontally */
+  background-color: #562fa8; /* Borrowed from the sidebar gradient */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s; /* For a smooth hover transition */
+}
+
+button[type="submit"]:hover {
+  background-color: #7dd700; /* Another color from the sidebar gradient */
+}
+#createProjectModal {
+  display: none;
+}
+
+.project-headers {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: small;
+  color: lightgray;
+}
+.project-headers,
+ul > li {
+  display: flex;
+  align-items: center;
+}
+
+.container ul {
+  padding-left: 0; /* Remove the default padding for UL */
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icon and the title */
+}
+
+.diagram-icon {
+  width: 30px;
+  height: 30px;
+}

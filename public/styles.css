@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background-color: #a2c2ff;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 15%;
+  background-color: #a2c2ff;
+  padding: 1rem;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.tabs li {
+  list-style: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.container {
+  flex-grow: 1;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header h1 {
+  margin: 0;
+  padding: 1rem;
+  background-color: #a2c2ff;
+  color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-body {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  border-right: 3px solid gray;
+  background-color: #a2c2ff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#question-input {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#ask-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+#response {
+  font-size: 24px;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabs {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.tabs li {
+  text-align: left;
+  font-size: x-large;
+  padding: 30px;
+}
+
+#logo-img {
+  height: 134px;
+  width: 134px;
+}

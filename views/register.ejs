@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+</head>
+<body>
+    <div class="left-content">
+      <div class="branding">
+        <img src="logo.svg" alt="Logo" class="logo">
+        <h3 class="brand-name">Zone.io</h3>
+      </div>
+      
+    
+      <div id="typed-strings">
+          <h5>Revolutionize your workflow with our AI-powered diagram generator</h5>
+          <h5>Unleash your creativity with intuitive diagramming</h5>
+          <h5>Visualize your data like never before with our smart chart generator</h5>
+      </div>
+      <span id="typed"></span>
+  </div>
+
+    <div class="right-content">
+        <h1>Sign up to Zone</h1>
+        <h2 id="underlinedText">Enter your details below</h2>
+        <form action="/register" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Register"><br>
+          </form>
+        <a id="underlinedText" href="/forgotpassword">Forgot password?</a>
+        <p id="underlinedText">By continuing, you're confirming that you've read and agree to our and Privacy policy</p>
+    </div>
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+
+  fetch('/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        // When the response is not ok, get the text from the response
+        return response.text().then(text => {
+          throw new Error(text);
+        });
+      }
+    })
+  
+.then(data => {
+    if (data.status === 'Success') {
+        // Store email and password in sessionStorage
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('password', password);
+        
+        // Redirect to a different page after successful signup
+        window.location.href = '/login';
+    } else {
+        // Handle signup error
+        alert(data.error);
+    }
+})
+
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+</script>
+
+
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 30,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true
+  });
+</script>
+
+
+</body>
+</html>

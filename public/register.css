@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: black;
+}
+
+.left-content {
+  background: rgb(20, 20, 40);
+  color: white;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.left-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.left-content #typed {
+  font-size: 1.5em;
+}
+
+.right-content {
+  background: rgb(242, 242, 242);
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+label {
+  color: rgb(150, 150, 150);
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background: #00cc88;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+  white-space: pre-wrap; /* Allow line breaks */
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px; /* Move down */
+  left: 30px; /* Move right */
+}
+
+.logo {
+  height: 70px; /* Increase size */
+  width: 70px; /* Increase size */
+  margin-right: 20px; /* Increase space between logo and brand name */
+}
+
+.brand-name {
+  color: white;
+  font-size: 2.5em; /* Increase size */
+}
+
+.left-content {
+  padding: 100px 50px 50px; /* Add more padding to the top */
+}
+
+#typed {
+  font-size: 32px;
+  background: linear-gradient(45deg, #1ed266, #330867);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  padding: 40px; /* Increase padding */
+  align-items: flex-start;
+  width: 70%;
+}
+
+h1 {
+  font-size: 44px; /* Increase size */
+  text-align: left;
+}
+#underlinedText {
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}

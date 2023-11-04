@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone</title>
+    <link rel="stylesheet" href="landing.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo-container">
+                <img src="logo.svg" alt="Zone Logo" class="navbar-logo-img">
+                <!-- Add your logo image path here -->
+                <a id="logo-text" href="#" class="navbar-logo">Zone</a>
+            </div>
+            <div class="navbar-links">
+                <a href="#">Pricing</a>
+                <a href="#">Solutions</a>
+                <a href="#">Product</a>
+                <a href="#">Company</a>
+                <a href="#">Support</a>
+
+            </div>
+
+            <div class="nav-right">
+
+                <a href="#">Login</a>
+                <a href="#" class="trial-button">Start Free Trial</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-text">
+        <span id="typed-output"></span>
+
+        <div class="intro-text">
+            <p>Explore Zone: Engage with lengthy documents in a dynamic chat format. We dive deep into comprehensive
+                manuals and detailed reports, offering a custom dialogue experience <span
+                    style="color: #BDEF0B;">powered by advanced AI</span>, ensuring
+                both
+                clarity and personalization for each user's needs.</p>
+        </div>
+    </div>
+
+
+
+    <video autoplay muted loop class="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        var options = {
+            strings: ['Real Time. Chat Based. <span id="revolutionary">Revolutionary</span>.'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1500,
+            startDelay: 1000,
+            loop: false,  // Set this to true
+            contentType: 'html' // specify that we're using HTML content in the strings
+        };
+        var typed = new Typed("#typed-output", options);
+
+    </script>
+
+
+</body>
+
+</html>

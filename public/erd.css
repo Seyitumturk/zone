@@ -1,0 +1,422 @@
+/* Reset some default browser styles */
+body,
+h1,
+form,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Add this line */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f8f9fa;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* added to layout header and content vertically */
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #4a4a4a;
+}
+h2 {
+  font-size: 1.75em;
+  margin: 2em 0 1em;
+  color: #4a4a4a;
+}
+
+label {
+  background-color: rgba(0, 0, 50, 0.9); /* change this to your desired color */
+  color: white;
+  border-radius: 4px 4px 0 0; /* top border radius */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  border: 1px solid #d8d8d8;
+  font-size: 1em;
+  line-height: 1.4em;
+  resize: vertical;
+}
+button {
+  padding: 1em 2em;
+  background-color: #f8b13d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+#diagram {
+  margin-top: 2em;
+  padding: 1em;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+}
+.mermaid {
+  text-align: center;
+}
+#explanation {
+  color: black;
+  margin-top: 2em;
+  padding: 1em;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* previous button styles and other styles */
+
+/*  previous CSS */
+
+/* Header Styles */
+.app-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #562fa8, #7dd700);
+  padding: 0.3em 1em;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 70px;
+  transition: all 0.3s ease-in-out;
+  /* Added the next line: */
+  background-color: #562fa8;
+  z-index: 10;
+  justify-content: center;
+}
+
+.chat-container {
+  height: 90vh; /* 90% of viewport height */
+  overflow-y: auto;
+}
+
+.user-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 10px; /* Margin from the bottom */
+  width: calc(50% - 40px); /* Adjust as per your design */
+}
+
+.user-input input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#generateButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#generateIcon {
+  height: 24px;
+  width: 24px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: purple; /* or your desired color */
+  color: white; /* text color */
+}
+
+.user-message p {
+  margin: 0;
+  color: inherit; /* This will make the p inherit the color of its parent */
+}
+
+.app-header .header-content h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-header.shrink {
+  padding: 0;
+  opacity: 0;
+}
+
+.app-logo {
+  width: 60px;
+  margin-right: 1em;
+}
+
+.app-title {
+  font-size: 2em;
+  margin-right: 1em;
+}
+
+.app-tagline {
+  font-size: 1em;
+}
+
+.app-header h1 {
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  line-height: 1; /* Adjust as needed */
+  color: #fff; /* Make sure the color is white */
+}
+
+/* Button Styles */
+button {
+  background-color: #7dd700;
+  border: none;
+  color: #5632a8;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.app-header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-header img {
+  height: 30px; /* Adjust based on your logo size */
+  margin-right: 1em;
+}
+.app-header.shrink {
+  padding: 0;
+  opacity: 0;
+}
+
+.app-logo {
+  width: 60px;
+  margin-right: 1em;
+}
+
+.app-title {
+  font-size: 2em;
+  margin-right: 1em;
+}
+
+.app-tagline {
+  font-size: 1em;
+}
+
+.content {
+  display: flex;
+  width: 100vw;
+  padding-top: 70px;
+}
+
+.left {
+  background-color: #ffffff; /* Now white */
+  color: #333; /* Text color */
+  width: 35%;
+  padding: 2em;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.right {
+  background-color: white; /* Darker purple */
+  color: #ffffff; /* Text color white */
+  width: 65%;
+  padding: 2em;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  border-left: 1px solid lightgray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  display: block;
+  background-color: #300054; /* Darker purple */
+  border-radius: 4px 4px 0 0; /* Top border radius */
+  padding-bottom: 0.5rem;
+}
+
+textarea {
+  flex-grow: 1;
+  margin-bottom: 1em;
+}
+
+button[type="submit"] {
+  width: 90%;
+  height: 50px; /* Adjust this value to make the button larger */
+  background: linear-gradient(45deg, #7dd700, #562fa8);
+  color: #fff; /* Make the text white */
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 2em;
+
+  background-size: 200% auto;
+  transition: background-position 1s ease-in-out;
+}
+
+.app-logo {
+  height: 50px; /* adjust based on your needs */
+}
+
+/* Your content style */
+.content {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 70px);
+}
+
+.right {
+  width: 65%;
+  padding: 2em;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+}
+
+form {
+  height: calc(100% - 4em);
+  display: flex;
+  flex-direction: column;
+}
+.erd-label {
+  text-align: center;
+  font-size: 1.3em;
+  color: rgb(91, 90, 90);
+}
+
+textarea {
+  flex-grow: 1;
+}
+button[type="submit"]:hover {
+  background: linear-gradient(45deg, #6ac100, #4f2e94);
+  background-position: right center; /* change the direction of the gradient */
+}
+
+.diagram-container {
+  position: relative;
+}
+
+.diagram-download-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-size: contain;
+  border: none;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.diagram-download-button img {
+  width: 35px; /* Adjust depending on the size you want */
+  height: 35px; /* Adjust depending on the size you want */
+}
+
+label[for="productDescription"] {
+  color: #333;
+  font-size: xx-large;
+  background-color: transparent;
+}
+
+/* ... existing CSS ... */
+
+/* Chatbox Styles */
+.chat-box {
+  background: rgba(240, 238, 235, 1); /* cream-gray white */
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.user-message p {
+  background-color: #e5e5ea;
+  border-radius: 15px;
+  padding: 10px 15px;
+  max-width: 70%;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-input {
+  margin-top: 1em;
+}
+
+.user-input textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+  background-color: #e5e5ea;
+}
+
+.user-input textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ... remaining CSS ... */
+.input-box {
+  display: flex;
+  align-items: center;
+  background-color: #800080; /* This is a standard purple. Adjust to your brand's specific shade if different. */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  color: white; /* or any color that suits the brand purple background */
+  border-radius: 8px;
+}
+
+.generate-btn {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.generate-btn img {
+  width: 20px; /* adjust as needed */
+  height: auto;
+}
+
+.user-message {
+  background-color: #800080; /* This is just a generic purple color, adjust to your brand color */
+  color: #ffffff; /* Adjust if necessary */
+}
+
+.input-box input {
+  background-color: #a19da1; /* Adjust this to your desired shade of greyed-out purple */
+  color: #ffffff; /* Adjust if necessary */
+}

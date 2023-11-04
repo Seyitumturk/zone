@@ -1,0 +1,174 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Sometype Mono', monospace;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: larger;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    /* Adjust this value to increase or decrease the spacing between the logo and navigation items */
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2em;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.navbar-links a:hover {
+    color: #ddd;
+}
+
+.bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.8;
+    top: -150px;
+}
+
+
+
+#revolutionary {
+    color: #BDEF0B;
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+
+#logo-img {
+    width: 65px;
+}
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between the logo image and text */
+}
+
+.navbar-logo-img {
+    height: 40px;
+    /* You can adjust the height as needed */
+    width: auto;
+}
+
+.trial-button:hover {
+    background-color: #374603;
+    /* Darkens the button color on hover for a subtle effect */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* İki öğe arasındaki boşluğu arttırma */
+}
+
+.nav-right a {
+    color: white;
+    /* Metin rengini beyaz yapma */
+    text-decoration: none;
+    /* Altı çizgili stilini kaldırma */
+    transition: transform 0.3s ease;
+    /* Hover etkisi için geçiş ekleme */
+    /* Metne gölge efekti ekleme */
+}
+
+.nav-right a .trial-button {
+    color: black;
+    /* Metin rengini beyaz yapma */
+    text-decoration: none;
+    /* Altı çizgili stilini kaldırma */
+    transition: transform 0.3s ease;
+    /* Hover etkisi için geçiş ekleme */
+    /* Metne gölge efekti ekleme */
+}
+
+.nav-right a:hover {
+    transform: scale(1.05);
+    /* Hover üzerinde metni biraz büyütme */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    /* Hover üzerinde gölgeyi yoğunlaştırma */
+}
+
+
+.main-text {
+    font-size: 7.5em;
+    /* Font boyutunu büyütme */
+    text-align: left;
+    /* Metni sola hizalama */
+    padding-left: 50px;
+    width: 80%;
+    /* Sol taraftan biraz boşluk eklemek için */
+}
+
+
+.trial-button {
+    background-color: #BDEF0B;
+    padding: 10px 20px;
+    /* Adjust the padding values to make the button wider and taller */
+    border-radius: 25px;
+    /* This gives the button a rounded appearance */
+    color: black;
+    transition: background-color 0.2s;
+}
+
+.nav-right a.trial-button {
+    color: black;
+    font-weight: bolder;
+    border: 4px solid white;
+}
+
+.intro-text {
+    font-size: xx-large;
+}

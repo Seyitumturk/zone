@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Zone.io</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <img id="logo-img" src="logo.svg" alt="">
+      </div>
+      <ul class="tabs">
+        <li>Library</li>
+        <li>Documents</li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+      <div class="chat-header">
+        <h1 id="ask"></h1>
+      </div>
+      <div class="chat-body">
+        <div id="response" class="hidden"></div>
+      </div>
+      <div class="chat-footer">
+        <input id="question-input" type="text" placeholder="Type your question here..." />
+        <button id="ask-button">Ask</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- index.ejs -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const askButton = document.getElementById("ask-button");
+      const questionInput = document.getElementById("question-input");
+      const responseDiv = document.getElementById("response");
+
+      askButton.addEventListener("click", async () => {
+        const question = questionInput.value;
+        const res = await fetch("/api/ask", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ question }),
+        });
+        const { answer } = await res.json();
+        console.log('Answer from server:', answer);  // Add this line
+
+        responseDiv.innerText = answer;
+      });
+    });
+  </script>
+
+</body>
+
+</html>

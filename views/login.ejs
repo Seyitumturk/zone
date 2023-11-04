@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop class="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="left-content">
+        <div class="branding">
+            <img src="logo.svg" alt="Logo" class="logo">
+            <h3 class="brand-name">Zone.io</h3>
+        </div>
+
+        <div id="typed-strings">
+            <h5>Revolutionize your workflow with our AI-powered diagram generator</h5>
+            <h5>Unleash your creativity with intuitive diagramming</h5>
+            <h5>Visualize your data like never before with our smart chart generator</h5>
+        </div>
+        <span id="typed"></span>
+    </div>
+
+    <div class="right-content">
+        <h1>Login to Zone</h1>
+        <form action="/login" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Login"><br>
+        </form>
+        <a id="underlinedText" href="/register">Don't have an account? Sign up</a>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, password: password })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error(data.error);
+                    } else {
+                        window.location.href = data.redirectUrl;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve email and password from sessionStorage
+            const email = sessionStorage.getItem('email');
+            const password = sessionStorage.getItem('password');
+
+            if (email && password) {
+                // Populate the login form fields with the stored credentials
+                document.querySelector('#email').value = email;
+                document.querySelector('#password').value = password;
+
+                // Remove the credentials from sessionStorage
+                sessionStorage.removeItem('email');
+                sessionStorage.removeItem('password');
+            }
+        });
+    </script>
+
+
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 40,
+            backSpeed: 40,
+            backDelay: 1500,
+            startDelay: 1000,
+            loop: true,
+            showCursor: false,
+        });
+    </script>
+
+</body>
+
+</html>
