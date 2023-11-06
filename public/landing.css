@@ -23,21 +23,31 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* This will push the logo and nav links to the opposite ends */
     width: 80%;
-    /* Adjust this value to increase or decrease the spacing between the logo and navigation items */
+    padding: 0 1em;
+    /* Add padding on both sides of the navbar content */
 }
+
+/* You can adjust padding-left as needed for your design */
+
+.navbar-links {
+    /* No need for 'margin-left: auto;' since we want everything aligned to the left */
+    display: flex;
+    gap: 2em;
+    margin-left: 1em;
+    /* Adjust this value as needed */
+}
+
+/* Other styles remain the same */
 
 .navbar-logo {
     color: white;
     font-size: 1.5em;
     text-decoration: none;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
-.navbar-links {
-    display: flex;
-    gap: 2em;
-}
 
 .navbar-links a {
     color: white;
@@ -70,20 +80,143 @@ html {
 
 
 #revolutionary {
-    color: #BDEF0B;
+    background: linear-gradient(90deg, #BDEF0B, #8cbf07, #6a9905, #467d03, #BDEF0B);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+    font-weight: 900;
 }
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
 
 .main-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 45%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 3em;
     text-align: center;
 }
 
+.floating-shape {
+    position: absolute;
+    top: 20px;
+    /* Adjust as necessary */
+    right: 20px;
+    /* Adjust as necessary */
+    width: 350px;
+    /* Increased size */
+    height: 350px;
+    /* Increased size */
+    background: linear-gradient(90deg, #00fffc, #ff00ff, #fffd00, #ff00ff, #00fffc);
+    /* Shimmering gradient */
+    clip-path: path('M31,60 C49,65 83,53 83,34 C83,15 49,3 31,8 C13,13 3,26 3,45 C3,64 13,55 31,60 Z');
+    animation: dance 5s infinite ease-in-out;
+    box-shadow: 0 0 15px #00fffc, 0 0 30px #ff00ff, 0 0 45px #fffd00;
+    /* Neon glow effect */
+    z-index: 10;
 
+}
+
+.floating-shape::before,
+.floating-shape::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    /* Smaller dot size */
+    height: 50px;
+    /* Smaller dot size */
+    background: inherit;
+    /* Same gradient as parent */
+    clip-path: circle(50%);
+    /* Circular dots */
+    z-index: -1;
+    opacity: 0.7;
+    /* Slightly see-through */
+    animation: dance 5s infinite ease-in-out, moveAround 10s infinite linear;
+}
+
+.floating-shape::before {
+    top: -30px;
+    /* Position relative to parent */
+    right: 10px;
+    /* Position relative to parent */
+    animation-delay: -5s;
+    /* Desynchronize animations */
+}
+
+.floating-shape::after {
+    bottom: -20px;
+    /* Position relative to parent */
+    left: 30px;
+    /* Position relative to parent */
+    animation-delay: -7s;
+    /* Desynchronize animations */
+}
+
+@keyframes moveAround {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(-20px) translateX(20px);
+    }
+
+    50% {
+        transform: translateY(20px) translateX(-20px);
+    }
+
+    75% {
+        transform: translateY(-10px) translateX(10px);
+    }
+}
+
+/* Existing animations and rest of your CSS */
+
+
+@keyframes dance {
+
+    0%,
+    100% {
+        clip-path: path('M31,60 C49,65 83,53 83,34 C83,15 49,3 31,8 C13,13 3,26 3,45 C3,64 13,55 31,60 Z');
+    }
+
+    50% {
+        clip-path: path('M30,65 C55,65 85,50 85,35 C85,20 55,5 30,5 C5,5 5,20 5,35 C5,50 5,65 30,65 Z');
+    }
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.floating-shape {
+    /* existing styles */
+    background-size: 200% 200%;
+    animation: gradient-flow 10s ease-in-out infinite, dance 5s infinite ease-in-out;
+}
 
 #logo-img {
     width: 65px;
@@ -93,7 +226,8 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Space between the logo image and text */
+    padding-right: 2em;
+    /* Adjust this value as needed for your design */
 }
 
 .navbar-logo-img {
@@ -111,7 +245,8 @@ html {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* İki öğe arasındaki boşluğu arttırma */
+    margin-left: auto;
+    padding-right: 1em;
 }
 
 .nav-right a {
@@ -171,4 +306,5 @@ html {
 
 .intro-text {
     font-size: xx-large;
+    margin-top: 75px;
 }
