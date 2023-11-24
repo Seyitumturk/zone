@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 240px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            color: #0056b3;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        .main-content h1,
+        .main-content h2 {
+            color: #0056b3;
+        }
+
+        .main-content p {
+            padding: 5px;
+            margin: 10px 0;
+            background: #f0f0f0;
+            border-left: 3px solid #0056b3;
+        }
+
+        .main-content code {
+            background-color: #e7e7e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="#introduction">Introduction</a>
+        <a href="#authentication">Authentication</a>
+        <a href="#endpoints">Endpoints</a>
+        <a href="#errors">Errors</a>
+        <!-- More links can be added here -->
+    </div>
+
+    <div class="main-content">
+        <h1>API Documentation</h1>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This is a brief introduction to the API...</p>
+        </section>
+
+        <section id="authentication">
+            <h2>Authentication</h2>
+            <p>Details about API authentication methods...</p>
+            <code>Authorization: Bearer YOUR_API_KEY</code>
+        </section>
+
+        <section id="endpoints">
+            <h2>Endpoints</h2>
+            <p>Information on the available endpoints...</p>
+        </section>
+
+        <section id="errors">
+            <h2>Error Handling</h2>
+            <p>Common API errors and their meanings...</p>
+        </section>
+
+        <!-- More sections can be added here -->
+    </div>
+
+</body>
+
+</html>

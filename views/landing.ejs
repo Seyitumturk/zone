@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone API Documentation</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <p class="logo-letter">Z</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">API Reference</a></li>
+                <li><a href="#">Overview</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="#" class="log-in">Log in</a>
+                <a href="#" class="sign-up">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Getting Started</a></li>
+                <li><a href="#">Authentication</a></li>
+                <li><a href="#">Backend Modules</a></li>
+                <li><a href="#">Endpoints</a></li>
+                <li><a href="#">Error Handling</a></li>
+                <li><a href="#">Hosting and Scalability</a></li>
+            </ul>
+        </aside>
+
+        <section class="documentation">
+            <h1>Zone API Documentation</h1>
+            <p>Welcome to the Zone API documentation. This guide provides everything you need to integrate Zone's
+                AI-driven capabilities into your existing systems and applications. Our API is designed to be RESTful,
+                easy to use, and highly efficient.</p>
+
+            <h2>Getting Started</h2>
+            <h3>Authentication</h3>
+            <p>All requests to the Zone API require API-key authentication. This ensures secure access to our services.
+                Follow these steps to authenticate:</p>
+            <ol>
+                <li>Obtain API Key: Register on our platform to receive your unique API key.</li>
+                <li>Include in Request Header: Use the API key in the header of every API request.</li>
+            </ol>
+
+            <h3>Backend Modules</h3>
+            <p>Our API offers a range of backend modules including:</p>
+            <ul>
+                <li>Chat Interface Integration: Seamlessly integrate real-time chat functionalities.</li>
+                <li>SOP Query Processing: Leverage our AI to process complex SOP queries efficiently.</li>
+            </ul>
+
+            <h3>Endpoints</h3>
+            <p>The Zone API provides various endpoints to access different functionalities:</p>
+            <ul>
+                <li>/query: Submit and retrieve responses to SOP-related queries.</li>
+                <li>/authenticate: Manage your API key and session.</li>
+                <li>/error: Handle and understand error responses.</li>
+            </ul>
+
+            <h3>Rate Limits</h3>
+            <p>To maintain service quality and prevent abuse, our API implements rate limits. Detailed information about
+                these limits will be provided in your API key package.</p>
+
+            <h3>Error Handling</h3>
+            <p>We use standard HTTP response codes to indicate the success or failure of an API request. Examples
+                include:</p>
+            <ul>
+                <li>200 OK: Successful request.</li>
+                <li>401 Unauthorized: Authentication error.</li>
+                <li>500 Internal Server Error: General server error.</li>
+            </ul>
+
+            <h3>Hosting and Scalability</h3>
+            <p>Hosted on AWS Elastic, our API guarantees high availability and scalability to meet varying demands.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Zone API</p>
+    </footer>
+
+</body>
+
+</html>
