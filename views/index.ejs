@@ -1,77 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Zone.io</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Conversations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="app-container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="logo">
-        <img id="logo-img" src="logo.svg" alt="Logo">
-      </div>
-      <ul class="tabs">
-        <li>Library</li>
-        <li>Documents</li>
-      </ul>
+  <nav class="navbar">
+    <div class="logo-box">
+      <div class="logo-square">Z</div>
+      <span>Zone</span>
     </div>
-
-    <!-- Main content -->
-    <div class="main-content">
-      <div class="content-left">
-        <h1>Real Time.<br>Chat Based.<br><span class="revolutionary">Revolutionary.</span></h1>
-        <p>Revolutionize document management with our AI-powered chat. Experience tailored dialogues, insightful summaries, and unmatched clarity for all your complex content.</p>
-        
-        <!-- Chat Interface -->
-        <div class="chat-interface">
-          <input id="question-input" type="text" placeholder="Ask a question..." />
-          <button id="ask-button">Ask</button>
-        </div>
-        <!-- Answer Box -->
-        <div id="response" class="answer-box hidden"></div>
-      </div>
-      <div class="content-right">
-        <!-- YouTube Video Embed -->
-        <iframe 
-          src="https://www.youtube.com/embed/qIAKrF_PhuI?autoplay=1&mute=1&playlist=qIAKrF_PhuI&loop=1" 
-          frameborder="0" 
-          allow="autoplay; encrypted-media" 
-          allowfullscreen 
-          style="border-radius: 15px; height: 100%;">
-        </iframe>
-      </div>
+    <ul>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+    <div>
+      <span class="login">Log in</span>
+      <a href="#" class="sign-up">Sign up free</a>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="title-section">
+      <h1>AI-Powered <span>Conversations.</span></h1>
+      <h2>Transforming Texts into Insights.</h2>
+      <a href="#" class="get-started-btn">Get Started</a>
+    </div>
+    <div class="tunnel-effect">
+      <!-- CSS-based simplified tunnel effect -->
     </div>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const askButton = document.getElementById("ask-button");
-      const questionInput = document.getElementById("question-input");
-      const responseDiv = document.getElementById("response");
-
-      askButton.addEventListener("click", async () => {
-        const question = questionInput.value;
-        const res = await fetch("/api/ask", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ question }),
-        });
-        const { answer } = await res.json();
-        console.log('Answer from server:', answer);
-
-        responseDiv.classList.remove('hidden');
-        responseDiv.innerText = answer;
-      });
-    });
-  </script>
-
 </body>
-
 </html>
