@@ -1,141 +1,222 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Maven Pro', sans-serif;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #004AAD, #CB6CE6);
+  overflow-x: hidden;
+  color: white;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  background-color: #f5f5f5;
+  color: black;
+  height: 80px;
+}
+
+.navbar .logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-square {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, #004AAD, #CB6CE6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li {
+  padding: 0.5rem 0;
+}
+
+.navbar a,
+.navbar span {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 0;
+}
+
+.navbar .login {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.navbar .sign-up {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to right, #004AAD, #CB6CE6);
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  height: calc(100vh - 80px);
+}
+
+.title-section {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.title-section h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  /* Gradient for 'AI-Powered' */
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Required for gradient text */
+  display: inline;
+  /* 'AI-Powered' and 'Conversations.' on the same line */
+}
+
+.title-section h1 span {
+  color: white;
+  /* 'Conversations.' in white */
+  display: inline;
+}
+
+.title-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 20px;
+}
+
+.get-started-btn {
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.get-started-btn:hover {
+  background-color: #e6e6e6;
+}
+
+
+/* Import the Maven Pro font */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
+
+
+.tunnel-effect {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Make it full screen height for better effect */
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
   }
-  
-  body {
-    background: linear-gradient(to right, #004AAD, #CB6CE6);
-    overflow-x: hidden;
-    color: white;
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
   }
-  
-  /* Navbar styles */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4rem;
-    background-color: #f5f5f5;
-    color: black;
-    height: 80px;
-  }
-  
-  .navbar .logo-box {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .logo-square {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to right, #004AAD, #CB6CE6);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .navbar li {
-    padding: 0.5rem 0;
-  }
-  
-  .navbar a, .navbar span {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem 0;
-  }
-  
-  .navbar .login {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .navbar .sign-up {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    background: linear-gradient(to right, #004AAD, #CB6CE6);
-    color: white;
-    border: none;
-    text-decoration: none;
-  }
-  
-  /* Main content styles */
-  .main-content {
-    display: flex;
-    align-items: center;
-    padding: 4rem;
-    height: calc(100vh - 80px);
-  }
-  
-  .title-section {
-    flex-grow: 1;
-    text-align: left;
-  }
-  
-  .title-section h1 {
-    font-size: 3.5rem;
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient for 'AI-Powered' */
-    -webkit-background-clip: text;
-    color: transparent; /* Required for gradient text */
-    display: inline; /* 'AI-Powered' and 'Conversations.' on the same line */
-  }
-  
-  .title-section h1 span {
-    color: white; /* 'Conversations.' in white */
-    display: inline;
-  }
-  
-  .title-section h2 {
-    font-size: 2.5rem;
-    color: white;
-    margin-top: 20px;
-  }
-  
-  .get-started-btn {
-    background-color: white;
-    color: black;
-    padding: 0.75rem 1.5rem;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: capitalize;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-  }
-  
-  .get-started-btn:hover {
-    background-color: #e6e6e6;
-  }
-  
-  /* Tunnel effect */
-  .tunnel-effect {
-    width: 40%; /* Smaller width */
-    height: 300px;
-    align-self: flex-start; /* Align to the top */
-    background: repeating-linear-gradient(
-      white,
-      white 1px,
-      black 1px,
-      black 5%
-    );
-    background-size: cover;
-  }
-  
-  /* Import the Maven Pro font */
-  @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
-  
+}
+
+.tunnel {
+  width: 400px;
+  /* Starting width */
+  height: 400px;
+  /* Starting height */
+  border-radius: 50%;
+  background: linear-gradient(270deg, purple, blue, purple);
+  background-size: 200% 200%;
+  margin: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  animation: ripple 2s ease-out infinite;
+}
+
+/* Create a delay for each ring so the ripples come one after another */
+.tunnel:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.tunnel:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.tunnel:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.tunnel:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.tunnel:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.tunnel:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.tunnel:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.tunnel:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.tunnel:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.tunnel:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+/* Continue this pattern for as many tunnel elements as you have */
