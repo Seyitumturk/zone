@@ -1,3 +1,4 @@
+/* Complete CSS with updated styles */
 html,
 body {
   height: 100%;
@@ -64,11 +65,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
-
-
 .navbar .sign-up {
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -94,17 +90,13 @@ body {
 .title-section h1 {
   font-size: 3.5rem;
   background: linear-gradient(to right, #00c6ff, #0072ff);
-  /* Gradient for 'AI-Powered' */
   -webkit-background-clip: text;
   color: transparent;
-  /* Required for gradient text */
   display: inline;
-  /* 'AI-Powered' and 'Conversations.' on the same line */
 }
 
 .title-section h1 span {
   color: white;
-  /* 'Conversations.' in white */
   display: inline;
 }
 
@@ -133,90 +125,67 @@ body {
   background-color: #e6e6e6;
 }
 
-
-/* Import the Maven Pro font */
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
-
-
-
-.tunnel-effect {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  /* Make it full screen height for better effect */
-  background: transparent;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
+/* Chat interface styles */
+.chat-interface {
+  background-color: #fff;
+  padding: 2rem 4rem;
+  color: #000;
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0.5);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+.chat-header h1 {
+  font-size: 2.5rem;
+  color: #000;
 }
 
-.tunnel {
-  width: 400px;
-  /* Starting width */
-  height: 400px;
-  /* Starting height */
-  border-radius: 50%;
-  background: linear-gradient(270deg, purple, blue, purple);
-  background-size: 200% 200%;
-  margin: 10px;
-  box-sizing: border-box;
-  position: absolute;
-  animation: ripple 2s ease-out infinite;
+.chat-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
 }
 
-/* Create a delay for each ring so the ripples come one after another */
-.tunnel:nth-child(1) {
-  animation-delay: 0s;
+.chat-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem; /* Increased gap */
+  margin-top: 2rem;
 }
 
-.tunnel:nth-child(2) {
-  animation-delay: 0.2s;
+.feature {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-.tunnel:nth-child(3) {
-  animation-delay: 0.4s;
+.feature h2 {
+  font-size: 1.5rem;
+  color: #000;
 }
 
-.tunnel:nth-child(4) {
-  animation-delay: 0.6s;
+.feature p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
 }
 
-.tunnel:nth-child(5) {
-  animation-delay: 0.8s;
+.start-chat-btn {
+  display: block;
+  width: fit-content;
+  background: linear-gradient(to right, #004AAD, #CB6CE6); /* Gradient background */
+  color: white;
+  padding: 1rem 2rem; /* Increased padding for visual balance with the gap */
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem auto 0; /* Increased margin to create a bigger gap */
+  text-decoration: none;
 }
 
-.tunnel:nth-child(6) {
-  animation-delay: 1s;
+.start-chat-btn:hover {
+  background: linear-gradient(to left, #004AAD, #CB6CE6); /* Inverted gradient on hover */
 }
 
-.tunnel:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-.tunnel:nth-child(8) {
-  animation-delay: 1.4s;
-}
-
-.tunnel:nth-child(9) {
-  animation-delay: 1.6s;
-}
-
-.tunnel:nth-child(10) {
-  animation-delay: 1.8s;
-}
-
-/* Continue this pattern for as many tunnel elements as you have */
+/* Additional styles for other elements can be added below */
