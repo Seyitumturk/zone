@@ -220,3 +220,79 @@ body {
 }
 
 /* Continue this pattern for as many tunnel elements as you have */
+
+
+section {
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 1px solid white;
+}
+
+.section-2 {
+  display: flex;
+  align-items: center;
+  /* Center the items horizontally */
+  flex-direction: column;
+  /* Stack children vertically */
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.section-2-header {
+  width: 80%;
+  height: 20rem;
+  background-color: black;
+  border-radius: 0 0 5em 5em;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  /* Make the header sticky */
+  top: 0;
+  /* Position it at the top of .section-2 */
+  z-index: 10;
+  /* Ensure it's above other content */
+}
+
+.section-2-text {
+  padding: 20px;
+  color: #f5f5f5;
+  font-size: 25px;
+  width: 90%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(245, 245, 245, 0.8);
+  /* Semi-transparent background */
+  margin-top: 300px;
+  backdrop-filter: blur(15px);
+  /* Creates the glassmorphic effect */
+  -webkit-backdrop-filter: blur(15px);
+  /* For Safari compatibility */
+}
+
+.cards div {
+  color: black;
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Semi-transparent background for each card */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Soft shadow for depth */
+  margin: 25px;
+  height: 500px;
+  border-radius: 1em;
+  border: none;
+  /* Removing the solid border */
+  backdrop-filter: blur(15px);
+  /* Glass effect for each card */
+  -webkit-backdrop-filter: blur(15px);
+  /* For Safari compatibility */
+}
+
+.card-one {
+  /* Add specific styles for .card-one here if needed */
+}
