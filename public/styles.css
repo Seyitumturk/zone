@@ -260,39 +260,72 @@ section {
   width: 90%;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 500px;
-  background-color: rgba(245, 245, 245, 0.8);
-  /* Semi-transparent background */
-  margin-top: 300px;
-  backdrop-filter: blur(15px);
-  /* Creates the glassmorphic effect */
-  -webkit-backdrop-filter: blur(15px);
-  /* For Safari compatibility */
+
+
+/* Chat interface styles */
+.chat-interface {
+  background-color: #fff;
+  padding: 2rem 4rem;
+  color: #000;
 }
 
-.cards div {
-  color: black;
-  padding: 100px;
-  background-color: rgba(255, 255, 255, 0.4);
-  /* Semi-transparent background for each card */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* Soft shadow for depth */
-  margin: 25px;
-  height: 500px;
-  border-radius: 1em;
+.chat-header h1 {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.chat-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.chat-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  /* Increased gap */
+  margin-top: 2rem;
+}
+
+.feature {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.start-chat-btn {
+  display: block;
+  width: fit-content;
+  background: linear-gradient(to right, #004AAD, #CB6CE6);
+  /* Gradient background */
+  color: white;
+  padding: 1rem 2rem;
+  /* Increased padding for visual balance with the gap */
+  border-radius: 20px;
   border: none;
-  /* Removing the solid border */
-  backdrop-filter: blur(15px);
-  /* Glass effect for each card */
-  -webkit-backdrop-filter: blur(15px);
-  /* For Safari compatibility */
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem auto 0;
+  /* Increased margin to create a bigger gap */
+  text-decoration: none;
 }
 
-.card-one {
-  /* Add specific styles for .card-one here if needed */
+.start-chat-btn:hover {
+  background: linear-gradient(to left, #004AAD, #CB6CE6);
+  /* Inverted gradient on hover */
 }
