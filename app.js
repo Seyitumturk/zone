@@ -11,11 +11,7 @@ const { processQuestion } = require("./controllers/0-main");  // Adjusted requir
 // Load environment variables
 dotenv.config({ path: ".env" });
 
-// Connect to the database and load services
-const db = require("./db/mongo.js");
-const projectService = require("./db/services/projectService.js");
-const userService = require("./db/services/userService.js");
-db.connectDB();
+
 
 // Firebase utility functions
 const {
