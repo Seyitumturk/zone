@@ -1,205 +1,552 @@
-/* Complete CSS with updated styles */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Maven Pro', sans-serif;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #004AAD, #CB6CE6);
-  overflow-x: hidden;
-  color: white;
+    background: linear-gradient(to right, #004AAD, #CB6CE6);
+    overflow-x: hidden;
+    color: white;
 }
 
-/* Navbar styles */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 4rem;
-  background-color: #f5f5f5;
-  color: black;
-  height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    background-color: #f5f5f5;
+    color: black;
+    height: 80px;
 }
 
 .navbar .logo-box {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .logo-square {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(to right, #004AAD, #CB6CE6);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #000000, #000000);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .logo-box:hover #logo,
+.navbar .login:hover {
+    color: transparent;
+    background: linear-gradient(to right, #004AAD, #CB6CE6);
+    -webkit-background-clip: text;
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
 .navbar li {
-  padding: 0.5rem 0;
+    padding: 0.5rem 0;
 }
 
 .navbar a,
 .navbar span {
-  text-decoration: none;
-  color: black;
-  padding: 0.5rem 0;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 0;
 }
 
-.navbar .login {
-  margin-right: 10px;
-  cursor: pointer;
+.navbar a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #004AAD, #CB6CE6);
+    -webkit-background-clip: text;
 }
 
 .navbar .sign-up {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to right, #004AAD, #CB6CE6);
-  color: white;
-  border: none;
-  text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: linear-gradient(to right, #000000, #000000);
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin-left: 1rem;
 }
 
-/* Main content styles */
 .main-content {
-  display: flex;
-  align-items: center;
-  padding: 4rem;
-  height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    height: calc(100vh - 80px);
 }
 
 .title-section {
-  flex-grow: 1;
-  text-align: left;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .title-section h1 {
-  font-size: 3.5rem;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  color: transparent;
-  display: inline;
-}
-
-.title-section h1 span {
-  color: white;
-  display: inline;
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline;
 }
 
 .title-section h2 {
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 20px;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 20px;
 }
 
 .get-started-btn {
-  background-color: white;
-  color: black;
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: capitalize;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-started-btn:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('star-animation.png') no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.get-started-btn:active:after {
+    opacity: 1;
 }
 
 .get-started-btn:hover {
-  background-color: #e6e6e6;
+    background-color: #e6e6e6;
 }
 
-/* Chat interface styles */
 .chat-interface {
-  background-color: #fff;
-  padding: 2rem 4rem;
-  color: #000;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    color: #000;
 }
 
 .chat-header h1 {
-  font-size: 2.5rem;
-  color: #000;
+    font-size: 2.5rem;
+    color: #000;
 }
 
 .chat-header p {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
 }
 
 .chat-features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem; /* Increased gap */
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 100px;
 }
 
-.feature {
-  background: #f0f0f0;
-  padding: 1rem;
-  border-radius: 8px;
+.chat-features .feature {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.feature h2 {
-  font-size: 1.5rem;
-  color: #000;
+.chat-features .feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px 5px linear-gradient(45deg, #004AAD, #CB6CE6);
 }
 
-.feature p {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 0.5rem;
+.chat-features .feature h2 {
+    font-size: 1.5rem;
+    color: #000;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 500px;
-  background-color: rgba(245, 245, 245, 0.8);
-  /* Semi-transparent background */
-  margin-top: 300px;
-  backdrop-filter: blur(15px);
-  /* Creates the glassmorphic effect */
-  -webkit-backdrop-filter: blur(15px);
-  /* For Safari compatibility */
+.chat-features .feature p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
 }
 
-.cards div {
-  color: black;
-  padding: 100px;
-  background-color: rgba(255, 255, 255, 0.4);
-  /* Semi-transparent background for each card */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* Soft shadow for depth */
-  margin: 25px;
-  height: 500px;
-  border-radius: 1em;
-  border: none;
-  /* Removing the solid border */
-  backdrop-filter: blur(15px);
-  /* Glass effect for each card */
-  -webkit-backdrop-filter: blur(15px);
-  /* For Safari compatibility */
+.start-chat-btn {
+    display: block;
+    width: fit-content;
+    background: #000000; /* Neon green background */
+    color: rgb(255, 255, 255); /* Plain black text */
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    margin: 3rem 0 0;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease-in-out;
 }
 
-.card-one {
-  /* Add specific styles for .card-one here if needed */
+.start-chat-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
 }
+
+.gradient-section {
+    height: 600px;
+    background: linear-gradient(to bottom, #FAF9F6, #ffffff);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+    border: 10px solid #C1FF72;
+    overflow-y: hidden;
+}
+
+.start-chatting-title {
+    font-family: 'Play', sans-serif; /* Play font applied */
+    font-size: 7rem;
+    background: linear-gradient(to right, #040404, #C1FF72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.chat-description {
+    color: #000000;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.phone-chat-box {
+    min-width: 5%; 
+    max-width: 22%;
+    min-height: 70%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.chat-window {
+    width: 70%;
+    overflow-y: auto;
+    padding-bottom: 60px;
+    padding: 20px;
+}
+
+.chat-input-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.chat-input-field {
+    width: 80%;
+    padding: 10px;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.profile-icon {
+    border-radius: 50%;
+    width: 10px;
+    height: 20px;
+    background-color: #333;
+}
+
+.chat-send-btn {
+    width: 20%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #000000;
+}
+
+.chat-send-btn::before {
+    content: '➤';
+}
+.tunnel-effect {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make it full screen height for better effect */
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .tunnel {
+    width: 400px; /* Starting width */
+    height: 400px; /* Starting height */
+    border-radius: 50%;
+    background: linear-gradient(270deg, purple, blue, rgb(160, 102, 160));
+    background-size: 200% 200%;
+    margin: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    animation: ripple 2s ease-out infinite;
+  }
+  
+  /* Create a delay for each ring so the ripples come one after another */
+  .tunnel:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .tunnel:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .tunnel:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .tunnel:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .tunnel-effect {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Make it full screen height for better effect */
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .tunnel {
+    width: 20rem;
+    /* Starting width */
+    height: 20rem;
+    /* Starting height */
+    border-radius: 50%;
+    background: linear-gradient(270deg, purple, blue, purple);
+    background-size: 200% 200%;
+    margin: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    animation: ripple 2s ease-out infinite;
+  }
+  
+  /* Create a delay for each ring so the ripples come one after another */
+  .tunnel:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .tunnel:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .tunnel:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .tunnel:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .tunnel:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  .tunnel:nth-child(6) {
+    animation-delay: 1s;
+  }
+  
+  .tunnel:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  
+  .tunnel:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  
+  .tunnel:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+  
+  .tunnel:nth-child(10) {
+    animation-delay: 1.8s;
+  }
+  
+  /* Continue this pattern for as many tunnel elements as you have */
+  
+  
+  section {
+    height: 100vh;
+    width: 100vw;
+    border-bottom: 1px solid white;
+  }
+  
+  .section-2 {
+    display: flex;
+    align-items: center;
+    /* Center the items horizontally */
+    flex-direction: column;
+    /* Stack children vertically */
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .section-2-header {
+    width: 80%;
+    height: 20rem;
+    background-color: black;
+    border-radius: 0 0 5em 5em;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    /* Make the header sticky */
+    top: 0;
+    /* Position it at the top of .section-2 */
+    z-index: 10;
+    /* Ensure it's above other content */
+  }
+  
+  .section-2-text {
+    padding: 20px;
+    color: #f5f5f5;
+    font-size: 25px;
+    width: 90%;
+  }
+  
+  
+  
+  /* Chat interface styles */
+  .chat-interface {
+    background-color: #fff;
+    padding: 2rem 4rem;
+    color: #000;
+  }
+  
+  .chat-header h1 {
+    font-size: 2.5rem;
+    color: #000;
+  }
+  
+  .chat-header p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  .chat-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    /* Increased gap */
+    margin-top: 2rem;
+  }
+  
+  .feature {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem;
+    color: #000;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
+  .start-chat-btn {
+    display: block;
+    width: fit-content;
+    background: linear-gradient(to right, #004AAD, #CB6CE6);
+    /* Gradient background */
+    color: white;
+    padding: 1rem 2rem;
+    /* Increased padding for visual balance with the gap */
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    margin: 3rem auto 0;
+    /* Increased margin to create a bigger gap */
+    text-decoration: none;
+  }
+  
+  .start-chat-btn:hover {
+    background: linear-gradient(to left, #004AAD, #CB6CE6);
+    /* Inverted gradient on hover */
+  }
